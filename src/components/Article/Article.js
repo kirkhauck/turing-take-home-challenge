@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Article = () => {
+const Article = ({ selectedArticle }) => {
   return (
     <div>
       

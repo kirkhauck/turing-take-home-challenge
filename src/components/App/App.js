@@ -9,15 +9,15 @@ import Home from '../Home/Home';
 const App = () => {
   const [news, setNews] = useState([]);
   const [selectedArticle, setSelectedArticle] = useState({});
-  const [error, setError] = useState('');
+  const [errorMessage, setErrorMessage] = useState('');
 
   return (
     <>
       <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path='/:articleId' element={<Article />} />
-        <Route path='/*' element={<ErrorMessage />} />
+        <Route path="/" element={<Home news={news} />} />
+        <Route path='/:articleId' element={<Article selectedArticle={selectedArticle} />} />
+        <Route path='/*' element={<ErrorMessage errorMessage={errorMessage} />} />
       </Routes>
     </>
   );
