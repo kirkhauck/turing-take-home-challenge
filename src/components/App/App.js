@@ -8,6 +8,7 @@ import Home from '../Home/Home';
 
 const App = () => {
   const [news, setNews] = useState([]);
+  const [selectedArticle, setSelectedArticle] = useState({});
   const [error, setError] = useState('');
 
   return (
